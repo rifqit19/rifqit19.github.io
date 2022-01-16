@@ -33,6 +33,10 @@ body {
   font-weight: 400;
 }
 
+.line {
+  margin-top: -16px;
+}
+
 /* search */
 
 .btn-search {
