@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../fontawesome//css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/style-detail-profil.css"
+    />
+
+    <title>Lettura</title>
+  </head>
+  <body>
+    <!--Awal NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-home">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/logo.png" alt="" width="75" class="me-2" />
+          <!-- <strong>PitaPutar</strong> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="genre.html">Genres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="author.html"
+                >Author</a
+              >
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <button class="btn btn-search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-dark btn-login ms-3"
+                onclick="gotoLogin()"
+              >
+                Login
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-search" type="submit">
+                <i class="fas fa-user-circle fa-lg"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir NavBar-->
+
+    <div class="container-fluid author">
+      <hr />
+    </div>
+
+    <!--Awal BreadCrumb-->
+    <div class="container">
+      <nav aria-label="breadcrumb" style="background-color: #ffff" class="mt-3">
+        <ol class="breadcrumb p-3">
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none" href="home.html">Home</a>
+          </li>
+
+          <li class="breadcrumb-item active" aria-current="page">Profil</li>
+        </ol>
+      </nav>
+    </div>
+    <!--Akhir BreadCrumb-->
+
+    <!--Detail Comic-->
+    <div class="container">
+      <div class="row row-product">
+        <div class="col-lg-5 text-center">
+          <figure class="figure">
+            <img
+              id="img-product"
+              src="../assets/profil/masahi.jpg"
+              class="figure-img img-fluid"
+              style="
+                height: 200px;
+                width: 200px;
+                object-fit: cover;
+                border-radius: 100px;
+              "
+            />
+            <figcaption
+              class="figure d-flex justify-content-evenly"
+            ></figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-7">
+          <h4 id="title-comic">Masashi Kishimoto</h4>
+          <h5 id="genre-comic" class="text-muted mb-3">Jepang</h5>
+          <p id="desc-comic">
+            Masashi Kishimoto adalah salah satu mangaka terbaik Jepang.
+            Kishimoto mulai mengembangkan bakat menggambarnya sejak duduk di
+            bangku Sekolah Dasar. Kishimoto lahir sebagai anak kembar.
+          </p>
+
+          <div class="btn-prorduct mt-5">
+            <a
+              href="#"
+              class="btn-warning text-white btn-lg btn-custom"
+              style="text-decoration: none"
+              >Upload Comic</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--Descriptipn & review-->
+      <div class="row row-comic pt-5">
+        <div class="col">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button
+                class="nav-link active"
+                id="nav-deskripsi-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-deskripsi"
+                type="button"
+                role="tab"
+                aria-controls="nav-deskripsi"
+                aria-selected="true"
+              >
+                My Comic
+              </button>
+              <button
+                class="nav-link"
+                id="nav-review-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-review"
+                type="button"
+                role="tab"
+                aria-controls="nav-review"
+                aria-selected="false"
+              >
+                Saved
+              </button>
+            </div>
+          </nav>
+          <div class="tab-content p-3" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active deskripsi"
+              id="nav-deskripsi"
+              role="tabpanel"
+              aria-labelledby="nav-deskripsi-tab"
+            >
+              <div class="row">
+                <div
+                  id="1"
+                  class="card-product ms-2 col-lg-2 col-md-3 col-sm-4 col-4 mt-4"
+                  onclick="gotoDetailComic()"
+                >
+                  <div class="card card-genre">
+                    <img
+                      src="../assets/Komik/Naruto.jpg"
+                      class="card-img-genre"
+                    />
+                    <div class="card-body">
+                      <h6 class="card-title title-genre">Naruto</h6>
+                      <p class="card-text desc-genre">Actoin</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  id="2"
+                  class="card-product col-lg-2 col-md-3 col-sm-4 col-4 mt-4"
+                  onclick="gotoDetailComic()"
+                >
+                  <div class="card card-genre">
+                    <img
+                      src="../assets/Komik/Naruto.jpg"
+                      class="card-img-genre"
+                    />
+                    <div class="card-body">
+                      <h6 class="card-title title-genre">Naruto</h6>
+                      <p class="card-text desc-genre">Action</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade review"
+              id="nav-review"
+              role="tabpanel"
+              aria-labelledby="nav-review-tab"
+            >
+              <div class="row pt-2" onclick="gotoDetailComic()">
+                <div class="col-3 col-md-1">
+                  <img
+                    src="../assets/Komik/one_piece.jpg"
+                    alt=""
+                    class="volume-img"
+                  />
+                </div>
+                <div class="col">
+                  <h5 class="volume-name">One Piece</h5>
+                  <p class="volume-desc">Volume 100</p>
+                </div>
+              </div>
+
+              <div class="row pt-2" onclick="gotoDetailComic()">
+                <div class="col-3 col-md-1">
+                  <img
+                    src="../assets/Komik/dragon_ball.jfif"
+                    alt=""
+                    class="volume-img"
+                  />
+                </div>
+                <div class="col">
+                  <h5 class="volume-name">Dragon Ball</h5>
+                  <p class="volume-desc">Fantasy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Descriptipn & review-->
+    </div>
+    <!--Akhie Detail Produk-->
+
+    <!--Awal foooter-->
+    <footer class="footer p-5 mt-5">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-md-12 text-md-center text-center pt-2 pb-2">
+            <a
+              href="https://web.facebook.com/rifqitriginandri?_rdc=1&_rdr"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../assets/sosmed/facebook.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rifqitriginandri/"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../assets/sosmed/instagram.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="col-md-12 text-md-center text-center pt-2 text-light">
+            <a href="#" class="tx-footer text-decoration-none"
+              >Privacy Policy</a
+            >
+            <span class="ps-1"> | </span>
+            <a href="#" class="tx-footer text-decoration-none"
+              >Terms Condition</a
+            >
+            <span class="ps-1"> | </span>
+            <a href="#" class="tx-footer text-decoration-none">FAQ</a>
+          </div>
+
+          <div class="col-md-12 text-md-center text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none"> </a>
+            <span class="ps-1"
+              >Copyright @2022 Lettura. All right reserved
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Akhir Footer-->
+
+    <script></script>
+
+    <script>
+      function gotoLogin() {
+        window.location.href = "login.html";
+      }
+      function gotoDetailComic() {
+        window.location.href = "detail-comic.html";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

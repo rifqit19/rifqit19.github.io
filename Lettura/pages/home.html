@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../fontawesome//css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style-home.css" />
+
+    <title>Lettura</title>
+  </head>
+  <body>
+    <!--Awal NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-home">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/logo.png" alt="" width="75" class="me-2" />
+          <!-- <strong>PitaPutar</strong> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="genre.html">Genres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="author.html">Author</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <button class="btn btn-search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-dark btn-login ms-3"
+                onclick="gotoLogin()"
+              >
+                Login
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-search"
+                type="submit"
+                onclick="gotoDetailProfil()"
+              >
+                <i class="fas fa-user-circle fa-lg"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir NavBar-->
+
+    <!--Awal Header-->
+
+    <div class="container-fluid home-line">
+      <hr />
+    </div>
+
+    <div class="container-fluid header mt-5 pb-5">
+      <div class="row row-header">
+        <div class="col-lg-6 text-center">
+          <figure class="figure">
+            <img
+              id="img-product"
+              src="../assets/monkey-surf.png"
+              class="figure-img img-fluid"
+              style="border-radius: 5px; width: 300px"
+            />
+          </figure>
+        </div>
+
+        <div class="col-lg-3 text-header">
+          <h3 id="name-header">Hi, Welcome to Lettura</h3>
+          <h5 id="sub-header">
+            Upload your comics and read comics anytime and anywhere for free!
+          </h5>
+          <div class="d-grid mt-3">
+            <button type="button" class="btn btn-outline-dark btn-start-read">
+              Start Reading
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-warning btn-upload text-light mt-2"
+            >
+              Upload Comic
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Akhir Header-->
+
+    <div class="container-fluid sub-header text-center mt-5 pt-5 pb-5">
+      <h3 id="name-sub-header">SAIL INTO THE COMIC WORLD WITH LETTURA</h3>
+      <h6 id="sub-sub-header">
+        Enter your comic world by reading comics in Letura. Lots of interesting
+        comics here. Let's read the comics and don't forget to give gifts to the
+        comic artists
+      </h6>
+    </div>
+
+    <div class="container-fluid mt-5 pd-5 pt-5 home-text">
+      <div class="row row-ht">
+        <div class="col-lg-6 text-header mt-5">
+          <h4 id="name-ht">Are You Ready!</h4>
+          <p id="sub-ht">All comics are waiting</p>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <figure class="figure">
+            <img
+              id="img-product"
+              src="../assets/char-home.png"
+              class="figure-img img-fluid"
+              style="border-radius: 5px; width: 400px"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!--start Popular-->
+    <div class="container mt-5 pd-5 popular-text">
+      <div class="row row-popular">
+        <div class="col-lg-10 text-popular mt-3">
+          <h4 id="title-popular">Popular Now</h4>
+          <p id="sub-popular">Go Check it.</p>
+        </div>
+
+        <div class="col-lg-2 text-end">
+          <a href="#">See All</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="1" class="col-lg-4 col-md-6 col-sm-8 col-8 mt-2">
+          <div class="card card-popular" onclick="gotoDetailComic()">
+            <img
+              src="../assets/Komik/dragon_ball.jfif"
+              class="card-img-popular"
+            />
+            <div class="card-body">
+              <h6 class="card-title title-popular">Dragon Ball</h6>
+              <p class="card-text desc-pupular">Fantasy</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="2" class="col-lg-4 col-md-6 col-sm-8 col-8 mt-2">
+          <div class="card card-popular" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/Naruto.jpg" class="card-img-popular" />
+            <div class="card-body">
+              <h6 class="card-title title-popular">Naruto</h6>
+              <p class="card-text desc-pupular">Action</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="3" class="col-lg-4 col-md-6 col-sm-8 col-8 mt-2">
+          <div class="card card-popular" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/one_piece.jpg" class="card-img-popular" />
+            <div class="card-body">
+              <h6 class="card-title title-popular">One Piece</h6>
+              <p class="card-text desc-pupular">Adventure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end Popular-->
+
+    <!--start new-->
+    <div class="container mt-5 pb-5 new-text">
+      <div class="row row-new">
+        <div class="col-lg-12 text-new mt-3">
+          <h4 id="title-new">Whats New?</h4>
+          <p id="sub-popular">Go Check it.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="1" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/one_piece.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">One Piece</h6>
+              <p class="card-text desc-new">Adventure</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="2" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/Naruto.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">Naruto</h6>
+              <p class="card-text desc-new">Action</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="3" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/one_piece.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">One Piece</h6>
+              <p class="card-text desc-new">Adventure</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="4" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/dragon_ball.jfif" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">Dragon Ball</h6>
+              <p class="card-text desc-new">Fantasy</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="5" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/dragon_ball.jfif" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">Dragon Ball</h6>
+              <p class="card-text desc-new">Fantasy</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="6" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/one_piece.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">One Piece</h6>
+              <p class="card-text desc-new">Adventure</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="7" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/Naruto.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">Naruto</h6>
+              <p class="card-text desc-new">Action</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="8" class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+          <div class="card card-new" onclick="gotoDetailComic()">
+            <img src="../assets/Komik/one_piece.jpg" class="card-img-new" />
+            <div class="card-body">
+              <h6 class="card-title title-new">One Piece</h6>
+              <p class="card-text desc-new">Adventure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center gap-2 mt-4">
+        <button class="btn btn-warning text-light btn-see-all" type="button">
+          See More Comics
+        </button>
+      </div>
+    </div>
+    <!--end new-->
+
+    <!--Awal foooter-->
+    <footer class="footer p-5 mt-5">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-md-12 text-md-center text-center pt-2 pb-2">
+            <a
+              href="https://web.facebook.com/rifqitriginandri?_rdc=1&_rdr"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../assets/sosmed/facebook.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rifqitriginandri/"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../assets/sosmed/instagram.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="col-md-12 text-md-center text-center pt-2 text-light">
+            <a href="#" class="tx-footer text-decoration-none"
+              >Privacy Policy</a
+            >
+            <span class="ps-1"> | </span>
+            <a href="#" class="tx-footer text-decoration-none"
+              >Terms Condition</a
+            >
+            <span class="ps-1"> | </span>
+            <a href="#" class="tx-footer text-decoration-none">FAQ</a>
+          </div>
+
+          <div class="col-md-12 text-md-center text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none"> </a>
+            <span class="ps-1"
+              >Copyright @2022 Lettura. All right reserved
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Akhir Footer-->
+
+    <script type="text/javascript">
+      function gotoLogin() {
+        window.location.href = "login.html";
+      }
+      function gotoDetailComic() {
+        window.location.href = "detail-comic.html";
+      }
+      function gotoDetailProfil() {
+        window.location.href = "detail-profil.html";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
