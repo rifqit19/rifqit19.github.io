@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background-color: #fefefe;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #35424a;
+}
+
+.home-line {
+  margin-top: -16px;
+}
+
+.header {
+  background-color: #fefefe;
+}
+
+.row-header {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* height: 400px; */
+}
+
+.navbar-home {
+  background-color: #fefefe;
+  font-weight: 700;
+}
+
+.btn-search {
+  background-color: #fefefe;
+  color: #3a4750;
+}
+
+.btn-profil {
+  background-color: #fefefe;
+  color: #3a4750;
+  width: 24px;
+  height: 24px;
+}
+
+#name-header {
+  color: #35424a;
+}
+
+#sub-header {
+  color: #61676b;
+  font-size: 36;
+}
+
+#name-sub-header {
+  color: #35424a;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#sub-sub-header {
+  color: #61676b;
+  font-size: 36;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.home-text {
+  background-color: #ffdd75;
+  background-image: url("../assets/wave.png");
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: right 0px bottom 20px;
+}
+
+.row-ht {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 400px; */
+}
+
+.row-popular {
+  display: flex;
+  align-items: center;
+}
+
+.row-new {
+  display: flex;
+  align-items: center;
+}
+
+#name-ht {
+  color: #fefefe;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#sub-ht {
+  color: #fefefe;
+  font-size: 36;
+  margin-left: 200px;
+}
+
+.row-mt {
+  margin-right: -300px;
+}
+
+.card-popular {
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 0px #000;
+}
+
+.card-img-popular {
+  border-radius: 20px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-new {
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 0px #000;
+}
+
+.card-img-new {
+  border-radius: 20px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.btn-see-all {
+  border-radius: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.card-body {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  bottom: 0px;
+  left: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* #img-wave {
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  height: 100px;
+} */
+
+.card-popular:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.card-new:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.btn-start-read {
+  border-radius: 10px;
+}
+
+.btn-upload {
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.btn {
+  /* border-radius: 10px; */
+  font-size: 14px;
+}
+
+.btn-login {
+  background-color: #3a4750;
+  border-width: 0;
+  border-radius: 100px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 994px) {
+  .form-control {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+.row-container {
+  background-color: #ffff;
+  margin: 0px;
+}
+
+.ps-1 {
+  color: white;
+}
+
+.tx-footer {
+  color: white;
+}
+
+.tx-footer:hover {
+  color: blue;
+  background-color: white;
+}
+
+.footer {
+  background-color: #42c0f0;
+}
